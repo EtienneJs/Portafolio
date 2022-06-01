@@ -2,7 +2,7 @@ import React from 'react'
 
 export const NavScreen = () => {
   return (
-    <div className='container'>
+    <div >
         <ul>
           <li>
             Inicio
