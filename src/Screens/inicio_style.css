@@ -1,0 +1,83 @@
+
+.content1{
+    --content:'Etienne Fernandez';
+    --start-color:#007CF0;
+    --end-color: #00DFD8;
+    --delay: 0s;
+    --delay2:0s
+}
+.content2{
+    --content:'Desarrollador Web FullStack';
+    --start-color:#7928CA;
+    --end-color: #FF0080;
+    --delay: 2s;
+    --delay2:2s
+}
+.content3{
+    --content:'MERN';
+    --start-color:#FF4d4d;
+    --end-color: #F9CB28;
+    --delay: 4s;
+    --delay2:4s
+}
+.BackImg{
+    font-family: 'PT Sans', sans-serif;
+    background-image: url('../Imgs/BackGround-Inic.jpg');
+    width: 100vw;
+    height: 300px;
+    background-repeat: none;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+
+
+}
+h1{
+    
+    color: white;
+    margin:  0 0 16px;
+    font-weight: 700;
+}
+
+span{
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+    letter-spacing: -.06rem;
+    display: block;
+    line-height: 1.1;
+    position: relative;
+    color: transparent;
+    animation: animated2 6s infinite;
+    animation-delay: var(--delay2);
+
+
+}
+
+span::before{
+    background: linear-gradient(90deg, var(--start-color), var(--end-color));
+    content: var(--content);
+    position: absolute;
+    inset: 0;
+    -webkit-background-clip:text;
+    -webKit-text-fill-color:transparent;
+    animation: animated 6s infinite;
+    animation-delay: var(--delay);;
+}
+
+@keyframes animated {
+    0%, 16.667%, 100%{
+        opacity: 1;
+    }
+    33.333%, 83.333%{
+        opacity: 0;
+    }
+}
+@keyframes animated2 {
+    0%, 16.667%, 100%{
+        color:transparent;
+    }
+    33.333%, 83.333%{
+        color:white;
+    }
+}

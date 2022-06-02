@@ -1,0 +1,22 @@
+.navbar_ul {
+    list-style-type: none;
+    margin-top: 10px;
+    width: 100vw;
+}
+
+.navbar_ul li {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-right: solid 0.1px;
+    margin-right: 1px;
+    border-radius: 10px;
+    
+}
+.navbar_ul li:hover {
+    transition: 1s ease-in-out;
+    background: blue;
+    box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+    -webkit-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+    -moz-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+
+}

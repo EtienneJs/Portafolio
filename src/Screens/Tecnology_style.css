@@ -1,0 +1,91 @@
+.oneCard{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.oneCard div i{
+    font-size: 100px;
+}
+.card_custom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px 80px;
+    background: black;
+    width: 15%;
+    height: 250px;
+    margin-right: 10px;
+    transition: ease-out 0.6s all;
+    
+}
+.oneCard .card_custom p{
+    color: white;
+    font-size: 1rem;
+}
+
+.fa-html5{
+    color: red;
+}
+.fa-css3-alt{
+    color: blue;
+}
+.fa-js{
+    color: yellow;
+}
+.fa-react{
+    color: aqua;
+}
+.fa-node-js{
+    color: green;
+}
+
+.twoCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.twoCard div i {
+    font-size: 100px;
+}
+.twoCard .card_custom p{
+    color: white;
+    font-size: 1rem;
+}
+
+.twoCard div img {
+    width: 120px;
+    padding: 10px;
+}
+.iconExpress{
+    color: white;
+    
+
+}
+
+
+.card_custom:hover{
+    width: 25%;
+    background: white;
+    color: black;
+    transition: ease-in 0.6s all;
+    
+    
+}
+
+.card_custom:hover p{
+    color: black;
+}
+.card_custom:hover i{
+    font-size: 200px;
+    transition: ease-in-out 1s;
+} 
+.card_custom:hover img{
+    width: 200px;
+    transition: ease-in-out 1s;
+} 
