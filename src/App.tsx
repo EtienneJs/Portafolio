@@ -3,6 +3,7 @@ import './App.css';
 import { ContacsScreen } from './Screens/ContacsScreen';
 import { InicioScreen } from './Screens/InicioScreen';
 import { NavScreen } from './Screens/NavScreen';
+import { PresentScreen } from './Screens/PresentScreen';
 import { ProyectsScreens } from './Screens/ProyectsScreens';
 import { TecnologyScreen } from './Screens/TecnologyScreen';
 import './styleApp.css'
@@ -12,6 +13,7 @@ function App() {
     <div className='container-main' >
       <NavScreen/>
       <InicioScreen/>
+      <PresentScreen/>
       <TecnologyScreen/>
       <ProyectsScreens/>
       <ContacsScreen/>

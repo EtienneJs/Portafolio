@@ -1,26 +1,71 @@
-import React from 'react'
+import React, { AnchorHTMLAttributes, HTMLAttributeAnchorTarget, useState } from 'react'
 import './navbar_styles.css'
+import { btnActiveInitial } from '../type';
+interface FormState {
+  btnActive:btnActiveInitial
+}
+const initialStateBtnActive = {
+  inicio: false,
+  presentacion:false,
+  tecnologia:false,
+  proyecto:false,
+  contactos:false
+}
 
 export const NavScreen = () => {
+  const [menu, setMenu] = useState({
+    menuOpen:true,
+    btnClose:true,
+    btnOpen:false
+  })
+  const [btnActive, setBtnActive] = useState<FormState['btnActive']>(initialStateBtnActive)
+  const handleBtnActive = (e:React.FormEvent<HTMLAnchorElement>) =>{
+    const menuItem = e.currentTarget.text.toLowerCase()
+    setBtnActive({
+      ...initialStateBtnActive,
+      [menuItem]: true
+    })
+  }
+  const handleMenu =()=>{
+
+    if(menu.btnOpen === true){
+      setMenu({
+        menuOpen:true,
+        btnClose:true,
+        btnOpen:false
+      })
+    } else {
+      setMenu({
+        menuOpen:false,
+        btnClose:false,
+        btnOpen:true
+      })
+    }
+  } 
   return (
-    <div>
-        <ul className='d-flex justify-content-center navbar_ul'>
-          <li className='text-decoration-none'>
+    <>
+        <div className='d-flex justify-content-start align-items-center navbar_ul'>
+        <i onClick={handleMenu} className={menu.btnOpen ? "fa-solid fa-bars" : "classNoc"}></i>
+          <div  className={menu.menuOpen ? "d-flex flex-column menuC" : "classNoc"}>
+          <a className={btnActive.inicio ? 'btnActive': ''} onClick={handleBtnActive}  href='#inicio'>
             Inicio
-          </li>
-          <li>
+          </a>
+          <a className={btnActive.presentacion ? 'btnActive': ''} onClick={handleBtnActive}  href='#present'>
             Presentacion
-          </li>
-          <li>
+          </a>
+          <a  className={btnActive.tecnologia ? 'btnActive': ''} onClick={handleBtnActive}  href='#tec'>
             Tecnologias
-          </li>
-          <li>
+          </a>
+          <a  className={btnActive.proyecto ? 'btnActive': ''} onClick={handleBtnActive} href='#proyect'>
             Proyectos
-          </li>
-          <li>
+          </a>
+          <a  className={btnActive.contactos ? 'btnActive': ''} onClick={handleBtnActive} href='#contac'>
             Contacto
-          </li>
-        </ul>
-    </div>
+          </a>
+          </div>
+          <i onClick={handleMenu} className={menu.btnClose ? "fa-solid fa-circle-xmark": 'classNoc'}></i>
+        </div>
+       
+    </>
   )
 }

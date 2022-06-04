@@ -3,7 +3,7 @@ import './inicio_style.css'
 
 export const InicioScreen = () => {
   return (
-    <div className='BackImg'>
+    <div id='inicio' className='BackImg'>
        <h1>
        <span className='content1'>Etienne Fernandez</span>
         <span className='content2'>Desarrollador Web FullStack</span>

@@ -1,22 +1,55 @@
 .navbar_ul {
     list-style-type: none;
-    margin-top: 10px;
-    width: 100vw;
+    position: fixed;
+    top: 40%;
+    left: 10px;
+    z-index: 10;
 }
 
-.navbar_ul li {
+.navbar_ul a {
     padding: 10px 20px;
     cursor: pointer;
     border-right: solid 0.1px;
     margin-right: 1px;
     border-radius: 10px;
-    
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
 }
-.navbar_ul li:hover {
+.navbar_ul a:hover {
     transition: 1s ease-in-out;
     background: blue;
     box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
     -webkit-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
     -moz-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
 
+}
+.btnActive{
+    background: blue;
+    box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+    -webkit-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+    -moz-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+}
+.fa-circle-xmark{
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+}
+.fa-circle-xmark:hover{
+    color: rgb(255, 123, 123);
+}
+.fa-circle-xmark:active{
+    color: rgb(250, 59, 59);
+}
+
+.classNoc{
+    display: none;
+    transition: 0.5s ease-in;
+}
+
+.fa-bars{
+    font-size: 30px;
+    cursor: pointer;
 }
