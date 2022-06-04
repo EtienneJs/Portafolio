@@ -3,3 +3,38 @@ body{
     color: white;
     font-family: 'PT Sans', sans-serif;
 }
+
+@media (max-width: 900px){
+    .oneCard{
+    width: 50%;
+    margin: 0 auto;
+    }
+    .twoCard{
+        width: 55%;
+        margin: 0 auto;
+        }
+
+    .card_custom{
+        width: 25%;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .card_custom:hover{
+        width: 50%;
+        background: rgb(199, 199, 199);
+        color: black;
+        transition: ease-in 0.6s all;
+        
+        
+    }
+    .containerCard{
+        flex-wrap: wrap;
+        margin: 0 auto;
+        
+    }
+    .card{
+        width: 50%;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}

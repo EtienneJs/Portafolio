@@ -10,7 +10,7 @@ export const ProyectsScreens = () => {
   return (
     <div id='proyect'>
     <h2 className='text-center mt-4 mb-4'> Proyectos </h2>
-    <div className='container'>
+   
         <div className='containerCard'>
         <div className="card">
   <img src={proyect1} className="imgClass" alt="..."/>
@@ -31,7 +31,7 @@ export const ProyectsScreens = () => {
   </div>
     </div>
     <div className="card">
-  <img src={proyect2} className="card-img-top" alt="..."/>
+  <img src={proyect2} className="imgClass" alt="..."/>
   <div className="card-body">
     <h5 className="card-title">Proyecto 1</h5>
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -39,7 +39,6 @@ export const ProyectsScreens = () => {
   </div>
     </div>
         </div>
-    </div>
     </div>
   )
 }
