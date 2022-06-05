@@ -9,7 +9,7 @@ const initialStateBtnActive = {
 }  
 
 
-export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology}) => {
+export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology,isVisibleProyect,isVisibleContac}) => {
   console.log(isVisibleTecnology)
   const [menu, setMenu] = useState({
     menuOpen:false,
@@ -43,6 +43,7 @@ export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology
       })
     }
   } 
+  console.log(isVisibleContac)
 
   return (
     <>
@@ -52,16 +53,16 @@ export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology
           <a className={ isVisibleInicio ? 'btnActive normal': 'normal'  } onClick={handleBtnActive}  href='#inicio'>
             Inicio
           </a>
-          <a className={ isVisiblePresent  ? 'btnActive normal': 'normal'} onClick={handleBtnActive}  href='#present'>
+          <a className={ isVisibleInicio  ? ' normal': isVisiblePresent ? ' btnActive normal':'normal'} onClick={handleBtnActive}  href='#present'>
             Presentacion
           </a>
-          <a  className={ isVisibleTecnology ? 'btnActive normal': 'normal'} onClick={handleBtnActive}  href='#tec'>
+          <a  className={ isVisibleInicio  ? ' normal':isVisiblePresent ? 'normal':isVisibleTecnology ? ' btnActive normal':'normal'} onClick={handleBtnActive}  href='#tec'>
             Tecnologias
           </a>
-          <a  className={btnActive.proyectos ? 'btnActive normal': 'normal'} onClick={handleBtnActive} href='#proyect'>
+          <a  className={isVisibleTecnology ? 'normal': isVisibleContac ? 'normal':isVisibleProyect ? 'btnActive normal':'normal'} onClick={handleBtnActive} href='#proyect'>
             Proyectos
           </a>
-          <a  className={btnActive.contactos ? 'btnActive normal': 'normal'} onClick={handleBtnActive} href='#contac'>
+          <a  className={ isVisibleContac ? 'btnActive normal':'normal'} onClick={handleBtnActive} href='#contac'>
             Contactos
           </a>
           </div>

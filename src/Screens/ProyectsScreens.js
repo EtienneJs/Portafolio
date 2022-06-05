@@ -4,9 +4,9 @@ import proyect2 from '../Imgs/project2.png'
 import '../Styles/cardp_style.css'
 
 
-export const ProyectsScreens = () => {
+export const ProyectsScreens = ({targetProyect}) => {
   return (
-    <div id='proyect' >
+    <div id='proyect' ref={targetProyect} >
     <h2 className='text-center mt-4 mb-4'> Proyectos </h2>
    
         <div className='containerCard'>

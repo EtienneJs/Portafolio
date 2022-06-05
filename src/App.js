@@ -12,6 +12,8 @@ function App() {
   const targetInicio = useRef(null)
   const targetPresent = useRef(null)
   const targetecnology = useRef(null)
+  const targetProyect = useRef(null)
+  const targetContac = useRef(null)
   const isVisibleInicio = useElementOnScreen({
     root:null,
     rootMargin:'-10px',
@@ -19,7 +21,7 @@ function App() {
   }, targetInicio)
   const isVisiblePresent = useElementOnScreen({
     root:null,
-    rootMargin:'-10px',
+    rootMargin:'0px',
     threshold:0
   }, targetPresent)
 
@@ -28,16 +30,26 @@ function App() {
     rootMargin:'0px',
     threshold:0
   }, targetecnology)
+  const isVisibleProyect = useElementOnScreen({
+    root:null,
+    rootMargin:'0px',
+    threshold:0
+  }, targetProyect)
+  const isVisibleContac = useElementOnScreen({
+    root:null,
+    rootMargin:'0px',
+    threshold:0
+  }, targetContac)
  
 
   return (
     <div className='container-main' >
-      <NavScreen isVisibleInicio={isVisibleInicio} isVisiblePresent={isVisiblePresent} isVisibleTecnology={isVisibleTecnology}/>
+      <NavScreen isVisibleContac={isVisibleContac} isVisibleProyect={isVisibleProyect} isVisibleInicio={isVisibleInicio} isVisiblePresent={isVisiblePresent} isVisibleTecnology={isVisibleTecnology}/>
       <InicioScreen targetInicio={targetInicio}/>
       <PresentScreen targetPresent={targetPresent}/>
       <TecnologyScreen targetecnology={targetecnology}/>
-      <ProyectsScreens/>
-      <ContacsScreen/>
+      <ProyectsScreens targetProyect={targetProyect}/>
+      <ContacsScreen targetContac={targetContac}/>
     </div>
     
   );

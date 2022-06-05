@@ -1,9 +1,9 @@
 import React from 'react'
 import '../Styles/contac_style.css'
-export const ContacsScreen = () => {
+export const ContacsScreen = ({targetContac}) => {
 
   return (
-    <div id='contac' className='container'>
+    <div id='contac' ref={targetContac} className='container'>
       <h2 className='text-center mt-4 mb-4'> Contactos </h2>
       <div className='containerContacs mt-4 mb-4'>
         <a href='https://github.com/eter19' target='_blanck'><i className="fa-brands fa-github"></i> <p>Etienne Fernandez</p></a>
