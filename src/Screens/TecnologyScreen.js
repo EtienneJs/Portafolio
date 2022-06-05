@@ -5,9 +5,9 @@ import iconMysql from '../Imgs/mysql.png'
 import iconType from '../Imgs/ts.png'
 import '../Styles/Tecnology_style.css'
 
-export const TecnologyScreen = () => {
+export const TecnologyScreen = ({targetecnology}) => {
   return (
-      <div id='tec'>
+      <div id='tec' ref={targetecnology}>
     <h2 className='text-center mb-3 mt-5'> Tecnologias </h2>
       <h3 className='text-center'> Principales </h3>
     <div className='oneCard'>

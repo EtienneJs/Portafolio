@@ -1,27 +1,23 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../Styles/navbar_styles.css'
-import { btnActiveInitial } from '../type';
-interface FormState {
-  btnActive:btnActiveInitial
-}
 const initialStateBtnActive = {
   inicio: false,
   presentacion:false,
   tecnologias:false,
   proyectos:false,
   contactos:false
-}
+}  
 
-export const NavScreen = () => {
+
+export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology}) => {
+  console.log(isVisibleTecnology)
   const [menu, setMenu] = useState({
     menuOpen:false,
     btnClose:false,
     btnOpen:true
   })
-  const [btnActive, setBtnActive] = useState<FormState['btnActive']>(initialStateBtnActive)
-
-
-  const handleBtnActive = (e:React.FormEvent<HTMLAnchorElement>) =>{
+  const [btnActive, setBtnActive] = useState(initialStateBtnActive)
+  const handleBtnActive = (e) =>{
     const menuItem = e.currentTarget.text.toLowerCase()
     setBtnActive({
       ...initialStateBtnActive,
@@ -42,32 +38,35 @@ export const NavScreen = () => {
         btnClose:false,
         btnOpen:true
       })
+      setBtnActive({
+        ...initialStateBtnActive
+      })
     }
   } 
+
   return (
     <>
         <div className='d-flex justify-content-start align-items-center navbar_ul'>
         <i onClick={handleMenu} className={menu.btnOpen ? "fa-solid fa-bars" : "classNoc"}></i>
           <div  className={menu.menuOpen ? "d-flex flex-column menuC" : "classNoc"}>
-          <a className={btnActive.inicio ? 'btnActive': ''} onClick={handleBtnActive}  href='#inicio'>
+          <a className={ isVisibleInicio ? 'btnActive normal': 'normal'  } onClick={handleBtnActive}  href='#inicio'>
             Inicio
           </a>
-          <a className={btnActive.presentacion ? 'btnActive': ''} onClick={handleBtnActive}  href='#present'>
+          <a className={ isVisiblePresent  ? 'btnActive normal': 'normal'} onClick={handleBtnActive}  href='#present'>
             Presentacion
           </a>
-          <a  className={btnActive.tecnologias ? 'btnActive': ''} onClick={handleBtnActive}  href='#tec'>
+          <a  className={ isVisibleTecnology ? 'btnActive normal': 'normal'} onClick={handleBtnActive}  href='#tec'>
             Tecnologias
           </a>
-          <a  className={btnActive.proyectos ? 'btnActive': ''} onClick={handleBtnActive} href='#proyect'>
+          <a  className={btnActive.proyectos ? 'btnActive normal': 'normal'} onClick={handleBtnActive} href='#proyect'>
             Proyectos
           </a>
-          <a  className={btnActive.contactos ? 'btnActive': ''} onClick={handleBtnActive} href='#contac'>
+          <a  className={btnActive.contactos ? 'btnActive normal': 'normal'} onClick={handleBtnActive} href='#contac'>
             Contactos
           </a>
           </div>
           <i onClick={handleMenu} className={menu.btnClose ? "fa-solid fa-circle-xmark": 'classNoc'}></i>
         </div>
-       
     </>
   )
 }

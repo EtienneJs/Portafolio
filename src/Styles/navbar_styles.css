@@ -11,7 +11,7 @@
     color: white;
     background: #333333;
 }
-.navbar_ul a {
+.navbar_ul .normal {
     background: #333333;
     padding: 10px 20px;
     cursor: pointer;
@@ -23,7 +23,7 @@
     margin-bottom: 10px;
     width: 100%;
 }
-.navbar_ul a:hover {
+.navbar_ul .normal:hover {
     transition: 1s ease-in-out;
     background: blue;
     box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
@@ -31,7 +31,7 @@
     -moz-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
 
 }
-.btnActive{
+.navbar_ul .btnActive{
     background: blue;
     box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
     -webkit-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
