@@ -4,6 +4,16 @@ body{
     font-family: 'PT Sans', sans-serif;
 }
 
+@media (min-width: 901px){
+    .navbar_ul .normal:hover {
+        transition: 1s ease-in-out;
+        background: blue;
+        box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+        -webkit-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+        -moz-box-shadow: 14px -10px 54px 19px rgba(255,255,255,0.46) inset;
+    
+    }
+}
 @media (max-width: 900px){
     .containerCard{
         flex-wrap: wrap;
