@@ -3,7 +3,7 @@ import iconJwt from '../Imgs/IconJwt.png'
 import iconExpress from '../Imgs/Expressjs.png'
 import iconMysql from '../Imgs/mysql.png'
 import iconType from '../Imgs/ts.png'
-import './Tecnology_style.css'
+import '../Styles/Tecnology_style.css'
 
 export const TecnologyScreen = () => {
   return (

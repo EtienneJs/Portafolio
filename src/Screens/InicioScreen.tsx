@@ -1,7 +1,7 @@
 import React from 'react'
-import './inicio_style.css'
-
+import '../Styles/inicio_style.css'
 export const InicioScreen = () => {
+ 
   return (
     <div id='inicio' className='BackImg'>
        <h1>

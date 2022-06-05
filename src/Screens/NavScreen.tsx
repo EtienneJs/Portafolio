@@ -1,5 +1,5 @@
-import React, { AnchorHTMLAttributes, HTMLAttributeAnchorTarget, useState } from 'react'
-import './navbar_styles.css'
+import React, { useState } from 'react'
+import '../Styles/navbar_styles.css'
 import { btnActiveInitial } from '../type';
 interface FormState {
   btnActive:btnActiveInitial
@@ -7,8 +7,8 @@ interface FormState {
 const initialStateBtnActive = {
   inicio: false,
   presentacion:false,
-  tecnologia:false,
-  proyecto:false,
+  tecnologias:false,
+  proyectos:false,
   contactos:false
 }
 
@@ -19,6 +19,8 @@ export const NavScreen = () => {
     btnOpen:false
   })
   const [btnActive, setBtnActive] = useState<FormState['btnActive']>(initialStateBtnActive)
+
+
   const handleBtnActive = (e:React.FormEvent<HTMLAnchorElement>) =>{
     const menuItem = e.currentTarget.text.toLowerCase()
     setBtnActive({
@@ -53,14 +55,14 @@ export const NavScreen = () => {
           <a className={btnActive.presentacion ? 'btnActive': ''} onClick={handleBtnActive}  href='#present'>
             Presentacion
           </a>
-          <a  className={btnActive.tecnologia ? 'btnActive': ''} onClick={handleBtnActive}  href='#tec'>
+          <a  className={btnActive.tecnologias ? 'btnActive': ''} onClick={handleBtnActive}  href='#tec'>
             Tecnologias
           </a>
-          <a  className={btnActive.proyecto ? 'btnActive': ''} onClick={handleBtnActive} href='#proyect'>
+          <a  className={btnActive.proyectos ? 'btnActive': ''} onClick={handleBtnActive} href='#proyect'>
             Proyectos
           </a>
           <a  className={btnActive.contactos ? 'btnActive': ''} onClick={handleBtnActive} href='#contac'>
-            Contacto
+            Contactos
           </a>
           </div>
           <i onClick={handleMenu} className={menu.btnClose ? "fa-solid fa-circle-xmark": 'classNoc'}></i>

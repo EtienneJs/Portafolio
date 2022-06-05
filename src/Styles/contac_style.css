@@ -1,0 +1,32 @@
+.containerContacs{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.containerContacs a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+.containerContacs .a{
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+}
+.containerContacs .a i {
+    font-size: 5rem;
+}
+.containerContacs a i {
+    font-size: 5rem;
+}
+
+.containerContacs a i:hover{
+    animation: bounce 2s infinite;
+
+}
+.containerContacs .a i:hover{
+    animation: bounce 2s infinite;
+
+}

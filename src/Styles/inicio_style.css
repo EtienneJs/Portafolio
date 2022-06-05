@@ -23,7 +23,7 @@
 .BackImg{
     font-family: 'PT Sans', sans-serif;
     background-image: url('../Imgs/BackGround-Inic.jpg');
-    width: 100vw;
+    width: 100%;
     height: 300px;
     background-repeat: none;
     background-size: cover;
@@ -42,7 +42,7 @@ h1{
 span{
     color: white;
     margin: 0;
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: -.06rem;
     display: block;
     line-height: 1.1;

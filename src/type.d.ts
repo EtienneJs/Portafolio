@@ -1,7 +1,7 @@
 export interface btnActiveInitial {
     inicio: boolean,
     presentacion:boolean,
-    tecnologia:boolean,
-    proyecto:boolean,
+    tecnologias:boolean,
+    proyectos:boolean,
     contactos:boolean
   }
