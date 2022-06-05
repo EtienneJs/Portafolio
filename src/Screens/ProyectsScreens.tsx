@@ -24,7 +24,7 @@ export const ProyectsScreens = () => {
   <div className="card-body">
     <h5 className="card-title">Portafolio</h5>
     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://etienneportafolio.netlify.app/" className="btn btn-primary">Go somewhere</a>
+    <a href="https://.netienneportafolioetlify.app/" className="btn btn-primary">Go somewhere</a>
     <a href="https://github.com/eter19/Portafolio" target='_blank' className="btn btn-primary" rel="noreferrer">Ir al repositorio</a>
   </div>
     </div>
