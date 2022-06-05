@@ -14,9 +14,9 @@ const initialStateBtnActive = {
 
 export const NavScreen = () => {
   const [menu, setMenu] = useState({
-    menuOpen:true,
-    btnClose:true,
-    btnOpen:false
+    menuOpen:false,
+    btnClose:false,
+    btnOpen:true
   })
   const [btnActive, setBtnActive] = useState<FormState['btnActive']>(initialStateBtnActive)
 
