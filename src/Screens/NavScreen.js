@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import  {  useState } from 'react'
 import '../Styles/navbar_styles.css'
 const initialStateBtnActive = {
   inicio: false,

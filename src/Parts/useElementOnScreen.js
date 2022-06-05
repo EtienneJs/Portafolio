@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react'
+import  { useState, useMemo, useEffect } from 'react'
 
 const useElementOnScreen = (options, target) =>{
     const [isVisible, setisVisible] = useState(false)

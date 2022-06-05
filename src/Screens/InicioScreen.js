@@ -1,5 +1,3 @@
-import React, { useRef } from 'react'
-import useElementOnScreen from '../Parts/useElementOnScreen'
 import '../Styles/inicio_style.css'
 export const InicioScreen = ({targetInicio}) => {
 
