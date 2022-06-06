@@ -18,16 +18,17 @@
     align-items: center;
     border-radius: 20px;
     padding: 30px 80px;
-    background: #333333;
+    background: #7a74ee;
     width: 15%;
     height: 250px;
     transition: ease-out 0.6s all;
     margin-right: 5px;
-    
-}
-.oneCard .card_custom p{
+    }
+.oneCard .card_custom a {text-decoration: none;}
+.oneCard .card_custom a p{
     color: white;
     font-size: 1rem;
+    text-align: center;
 }
 
 .fa-html5{
@@ -52,12 +53,14 @@
     align-items: center;
     flex-wrap: wrap;
 }
-.twoCard div i {
+.twoCard .card_custom a {text-decoration: none;}
+.twoCard div a i {
     font-size: 100px;
 }
-.twoCard .card_custom p{
+.twoCard .card_custom a p{
     color: white;
     font-size: 1rem;
+    text-align: center;
 }
 
 .twoCard div img {
@@ -76,6 +79,7 @@
     background: rgb(199, 199, 199);
     color: black;
     transition: ease-in 0.6s all;
+ 
     
     
 }
@@ -83,16 +87,18 @@
     color: blueviolet;
 }
 
-.card_custom:hover p{
+.card_custom:hover a p{
     color: black;
 }
-.card_custom:hover i{
+.card_custom:hover a i{
     font-size: 10rem;
     transition: ease-in-out 1s;
+    animation: bounce 3s infinite;
 } 
 .card_custom:hover img{
     width: 200px;
     transition: ease-in-out 1s;
+    animation: bounce 3s infinite;
 } 
 .containerCard{
     display: flex;

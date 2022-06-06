@@ -6,7 +6,7 @@ import '../Styles/cardp_style.css'
 
 export const ProyectsScreens = ({targetProyect}) => {
   return (
-    <div id='proyect' ref={targetProyect} >
+    <div className='container' id='proyect' ref={targetProyect} >
     <h2 className='text-center mt-4 mb-4'> Proyectos </h2>
    
         <div className='containerCard'>
