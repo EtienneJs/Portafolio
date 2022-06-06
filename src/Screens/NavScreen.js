@@ -4,7 +4,6 @@ import '../Styles/navbar_styles.css'
 
 
 export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology,isVisibleProyect,isVisibleContac}) => {
-  console.log(isVisibleTecnology)
   const [menu, setMenu] = useState({
     menuOpen:false,
     btnClose:false,
@@ -26,11 +25,10 @@ export const NavScreen = ({isVisibleInicio, isVisiblePresent, isVisibleTecnology
       })
     }
   } 
-  console.log(isVisibleContac)
 
   return (
     <>
-        <div className='d-flex justify-content-start align-items-center navbar_ul'>
+        <div className={!isVisibleInicio ? 'animate__heartBeat d-flex justify-content-start align-items-center navbar_ul':'d-none'}>
         <i onClick={handleMenu} className={menu.btnOpen ? "fa-solid fa-bars" : "classNoc"}></i>
           <div  className={menu.menuOpen ? "d-flex flex-column menuC" : "classNoc"}>
           <a className={ isVisibleInicio ? 'btnActive normal': 'normal'  }   href='#inicio'>
